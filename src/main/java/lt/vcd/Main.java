@@ -4,14 +4,27 @@ package lt.vcd;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+        Point p1 =new Point(3,  4);
+        Point p2 =new Point(6,  8);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        System.out.println(p1.distanceFromOrigin());
+
+        System.out.println(p1);
+        System.out.println(p2);
+
+        p1.translate(4,3);
+        System.out.println(p1);
+
+        System.out.println(p1.distance(p2));
+
+        p2.setLocation(2,3);
+        System.out.println(p2);
+
+        Line line1 = new Line(p1, p2);
+        System.out.println(line1);
+
+        System.out.println(line1.distanceLine());
+
+
     }
 }
